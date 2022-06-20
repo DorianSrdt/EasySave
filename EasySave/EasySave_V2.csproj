@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+	<ItemGroup>
+        <Assets Include="$(ProjectDir)\Assets\*.*" />
+        <Assets Remove="Assets\CryptoSoft.exe" />
+        <None Remove="Assets\LogoEasySave.png" />
+        <None Remove="Assets\Home.png" />
+        <None Remove="Assets\Create.png" />
+        <None Remove="Assets\List.png" />
+        <None Remove="Assets\Setting.png" />
+        <None Remove="Assets\Exit.png" />
+        <None Remove="Assets\ExtFiles.txt" />
+        <None Remove="Assets\ExtFilesToEncrypt.txt" />
+		<None Remove="Assets\BSList.txt" />
+		<None Remove="Assets\BSListToFollow.txt" />
+        <Resource Include="Assets\LogoEasySave.png" />
+        <Resource Include="Assets\Home.png" />
+        <Resource Include="Assets\Create.png" />
+        <Resource Include="Assets\List.png" />
+        <Resource Include="Assets\Setting.png" />
+        <Resource Include="Assets\Exit.png" />
+        <Resource Include="Assets\ExtFiles.txt" />
+        <Resource Include="Assets\ExtFilesToEncrypt.txt" />
+		<Resource Include="Assets\BSList.txt" />
+		<Resource Include="Assets\BSListToFollow.txt" />
+    </ItemGroup>
+    <Target Name="FilesInitiation" AfterTargets="Build">
+        <Copy SourceFiles="@(Assets)" DestinationFiles="@(Assets->'$(OutDir)\Assets\%(Filename)%(Extension)')" />
+    </Target>
+    <Target Name="FilesDeletion" AfterTargets="Clean">
+        <RemoveDir Directories="$(OutDir)" />
+    </Target>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ModelView\" />
+  </ItemGroup>
+
+</Project>

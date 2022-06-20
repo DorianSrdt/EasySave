@@ -1,0 +1,64 @@
+﻿<Window x:Class="EasySave_V2.View.Extfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasySave_V2"
+        mc:Ignorable="d"
+        Background="#1a1a34"
+        Title="EasySave : .ext files list " Height="310" Width="400" ResizeMode="NoResize">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <ListBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="9" Name="LeftListBox" Background="#2e325b" Foreground="White" />
+
+        <ListBox Grid.Column="10" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="9" Name="RightListBox" Background="#2e325b" Foreground="White" />
+
+        <TextBox x:Name="Selected" Grid.Column="10" Grid.Row="12" Grid.ColumnSpan="5" Text=".ext to encrypte" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" Background="Transparent" BorderThickness="0" />
+        <TextBox x:Name="Available" Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="5" Text=".ext list available" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" Background="Transparent" BorderThickness="0" />
+
+        <Button Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" x:Name="Add" Content="Add" Click="Button_Click_Add" Background="MediumPurple" Foreground="White" BorderThickness="0" />
+        <Button Grid.Column="7" Grid.Row="5" Grid.ColumnSpan="2" x:Name="Crypt" Content="Crypt" Click="Button_Click_RemoveRight" Background="MediumPurple" Foreground="White" VerticalAlignment="Top" BorderThickness="0" />
+        <Button Grid.Column="7" Grid.Row="7" Grid.ColumnSpan="2" x:Name="Remove" Content="Remove" Click="Button_Click_RemoveLeft"  Background="MediumPurple" Foreground="White" VerticalAlignment="Top" BorderThickness="0" />
+        <Button Grid.Column="7" Grid.Row="9" Grid.ColumnSpan="2" x:Name="Confirm" Content="Confirm" Click="Button_Click_Confirm"  Background="MediumPurple" Foreground="White" VerticalAlignment="Top" BorderThickness="0" />
+        <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" x:Name="AddExt" Text="" BorderThickness="0" />
+
+
+    </Grid>
+</Window>

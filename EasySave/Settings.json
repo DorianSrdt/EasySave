@@ -1,0 +1,14 @@
+{
+  "Language": "French",
+  "LogExtension": "json",
+  "ExtensionToCrypt": [
+    ".var",
+    ".me",
+    ".rip",
+    ".os",
+    ".io"
+  ],
+  "BusinessSoftwareFollow": [
+    "firefox"
+  ]
+}

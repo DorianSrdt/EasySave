@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Log>
+    <Date>06/12/2021 21:44:32</Date>
+    <BackUpName>dsf</BackUpName>
+    <FileSource>d:\wiki\\index.html</FileSource>
+    <FileTarget>d:\zindex.html</FileTarget>
+    <FileSize>0</FileSize>
+    <FileTransferTime>14</FileTransferTime>
+  </Log>
+</root>
